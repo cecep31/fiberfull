@@ -8,6 +8,7 @@ import (
 	"fiberfull/service"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
@@ -27,6 +28,7 @@ func main() {
 
 	// Setup Fiber
 	app := fiber.New(config.NewFiberConfig())
+	app.Use(logger.New())
 	app.Use(recover.New())
 
 	// Setup Routing
