@@ -9,7 +9,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Mac Book Pro",
+  "name": "Rog",
   "price": 40000000,
   "quantity": 10
 }
